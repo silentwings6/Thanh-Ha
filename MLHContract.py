@@ -7,7 +7,7 @@ from web3.providers.websocket import WebsocketProvider
 from web3 import Web3
 from solc import compile_standard
 
-with open("MLHToken.sol") as c:
+with open("Token.sol") as c:
  contractText=c.read()
 with open(".pk") as pkfile:
  privateKey=pkfile.read()
