@@ -46,10 +46,10 @@ greeter = W3.eth.contract(
 
 
 print("Output from balanceOf()")
-print(greeter.functions.balanceOf("0xF2FAE8e32a632b1377Aaf0f7B76f9bA41a6faE3C").call())
+print(greeter.functions.balanceOf("0x77bf401b369Ce1383900dFa004A558D7CeF8B615").call())
       
-nonce = W3.eth.getTransactionCount("0x77bf401b369Ce1383900dFa004A558D7CeF8B615")
-tx_dict = greeter.functions.transfer("0xF2FAE8e32a632b1377Aaf0f7B76f9bA41a6faE3C", 250).buildTransaction({
+nonce = W3.eth.getTransactionCount("0xF2FAE8e32a632b1377Aaf0f7B76f9bA41a6faE3C")
+tx_dict = greeter.functions.transfer("0x77bf401b369Ce1383900dFa004A558D7CeF8B615", 250).buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),
@@ -75,4 +75,4 @@ if tx_receipt is None:
 #tx_hash = greeter.functions.setGreeting('Nihao').transact({"from":account1.address})
 #tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
 print("Output from balanceOf()")
-print(greeter.functions.balanceOf("0xF2FAE8e32a632b1377Aaf0f7B76f9bA41a6faE3C").call())
+print(greeter.functions.balanceOf("0x77bf401b369Ce1383900dFa004A558D7CeF8B615").call())
